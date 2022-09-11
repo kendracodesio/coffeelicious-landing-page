@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>☕️ Coffeelicious</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cuprum&family=Merienda:wght@700&display=swap');
+
+    h1 {
+      margin: 40px auto 10px auto;
+      text-align: center;
+      font-family: 'Merienda', cursive;
+      font-size: 56px;
+      color: #492d22;
+      border-top: 10px dotted #088c8b;
+      padding-top: 25px;
+    }
+
+    h2 {
+      margin: 30px auto;
+      text-align: center;
+      font-family: 'Cuprum', sans-serif;
+      font-size: 30px;
+      color: #088c8b;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 50px auto;
+      border-radius: 120px 20px;
+      max-width: 400px;
+      box-shadow: -15px 15px 10px rgba(80, 80, 80, 0.464);
+    }
+
+    body {
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    }
+
+    p {
+      max-width: 500px;
+      display: block;
+      margin: 0 auto;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      line-height: 1.25;
+      text-align: justify;
+    }
+
+    button {
+      display: inline;
+      background: #088c8b;
+      padding: 15px 30px;
+      font-family: "Cuprum", sans-serif;
+      font-size: 24px;
+      border: 1px solid #088c8b;
+      border-radius: 30px;
+      box-shadow: 5px 5px 10px rgba(80, 80, 80, 0.464);
+      transition: all 200ms ease-in-out;
+    }
+
+    button:hover {
+      opacity: 90%;
+      cursor: pointer;
+      color: #e2d1c3;
+    }
+
+    a:link,
+    a:visited {
+      color: #088c8b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #492d22;
+
+    }
+
+    .main {
+      border: 1px solid #492d22;
+      padding: 20px;
+      max-width: 700px;
+      max-height: 1400px;
+      margin: 60px auto;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 2px #492d2259;
+    }
+
+    .price {
+      display: inline;
+      font-family: "Cuprum", sans-serif;
+      font-size: 24px;
+      line-height: 2;
+    }
+
+    .order {
+      display: block;
+      margin: 20px auto;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 90px auto 20px auto;
+      font-family: Courier;
+      font-size: 17px;
+
+    }
+
+    .slashed-price {
+      text-decoration: line-through;
+      color: rgba(50, 50, 50, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h1>Coffeelicious</h1>
+
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/498/original/coffee-art-cup.jpg?1656976080"
+      alt="coffee latte art" />
+    <h2>A Recipe E-book For Coffee Lovers</h2>
+    <p>
+      <em><strong>Coffeelicious</strong></em> is a recipe e-book I created out
+      of my love for the taste of <strong>coffee</strong>. ☕️ 🤎 <br />
+      <br />
+    </p>
+
+    <p>
+      The broad array of delicious beverages and treats made from coffee is
+      astounding! Over the years, I have discovered many ways people around
+      the world enjoy the taste of coffee.
+    </p>
+    <br />
+    <p>
+      From strong and black, to mild with cream and sugar or honey, to gourmet
+      recipes ranging from coffee cake to cappuccino truffles, the favorful
+      world of coffee is seemingly endless.
+    </p>
+    <br />
+    <p>
+      I've collected and tried hundreds of different coffee recipes over the
+      years and so far, it's been an amazing experience. So amazing in fact,
+      that I wanted to share it with the world!
+    </p>
+    <br />
+    <p>
+      Order your copy of <em><strong>Coffeelicious</strong></em> today and
+      you'll get all my favorite coffee drink recipes with step by step
+      instructions, tricks, tips, and so much more! 📖 ☕️ <br />
+      <br />
+    </p>
+
+    <p>
+      ✚ BONUS: You also get my most delicious, mouthwatering coffee related
+      dessert recipes that you, your friends, and your family will enjoy today
+      and in the many years to come!
+    </p>
+    <br />
+    <div class="order">
+      <div class="price">
+        Special Offer! 🙌 $4.99 <span class="slashed-price">$9.99</span>
+        <br />
+        <button>Order Now</button>
+      </div>
+      <br />
+    </div>
+    <br />
+  </div>
+
+  <div class="footer">👩‍💻 Coded by <a href="https://www.linkedin.com/in/kendrarreynolds/">Kendra Reynolds</a></div>
+  <script>
+    function emailIsValid(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function firstNameIsValid(firstName) {
+      return firstName.length > 0;
+    }
+
+    function order() {
+      let firstName = prompt("What is your first name?");
+
+      if (firstNameIsValid(firstName)) {
+        let email = prompt(`👋 Hello ${firstName}, enter your e-mail address to confirm your order.`);
+
+        if (emailIsValid(email)) {
+          alert(`😍 Thank you, ${firstName}! We'll be in touch shortly to finalize your purchase. Check your email: ${email} for next steps!`);
+        } else {
+          alert("😵 Uh-Oh... It seems you entered an invalid e-mail. Please try again!");
+        }
+
+      } else {
+        alert("🫢 Ooops...You must enter your name to place an order. Try Again!")
+      }
+
+    }
+
+    let orderButton = document.querySelector("button");
+
+    orderButton.addEventListener("click", order);
+
+  </script>
+</body>
+
+</html>
